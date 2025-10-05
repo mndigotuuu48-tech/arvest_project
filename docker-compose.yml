@@ -1,0 +1,37 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: php-site:latest
+    environment:
+      ANTIBOT_API_KEY: ${ANTIBOT_API_KEY}
+      ANTIBOT_ENDPOINT: ${ANTIBOT_ENDPOINT:-https://api.example.com}
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    # volumes:
+    #   - ./storage:/var/www/html/storage
+
+  # db:
+  #   image: mysql:8.0
+  #   environment:
+  #     MYSQL_DATABASE: ${MYSQL_DATABASE:-app}
+  #     MYSQL_USER: ${MYSQL_USER:-app}
+  #     MYSQL_PASSWORD: ${MYSQL_PASSWORD:-secret}
+  #     MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-supersecret}
+  #   volumes:
+  #     - db_data:/var/lib/mysql
+  #   restart: unless-stopped
+
+  # cron:
+  #   image: php-site:latest
+  #   command: >
+  #     sh -c "echo '* * * * * www-data php /var/www/html/scripts/index.php > /proc/self/fd/1 2>&1' | crontab - && cron -f"
+  #   depends_on:
+  #     - app
+  #   restart: unless-stopped
+
+# volumes:
+#   db_data:
