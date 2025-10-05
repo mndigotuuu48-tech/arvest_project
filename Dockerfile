@@ -39,6 +39,6 @@ RUN chown -R www-data:www-data /var/www/html \
 EXPOSE 80
 
 HEALTHCHECK --interval=30s --timeout=5s --retries=5 \
-  CMD curl -fsS http://localhost/ || exit 1
+  CMD curl -fsS http://localhost/healthz || exit 1
 
 CMD ["apache2-foreground"]
