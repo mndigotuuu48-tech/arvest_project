@@ -2,7 +2,6 @@
 .gitignore
 Dockerfile
 .dockerignore
-docker/
 node_modules/
 vendor/
 *.log
