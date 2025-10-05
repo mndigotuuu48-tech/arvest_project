@@ -1,0 +1,29 @@
+[providers]
+php = "8.2"
+
+[phases.setup]
+nixPkgs = ["php82", "php82Packages.composer", "apacheHttpd", "apacheHttpd.modules.php"]
+
+[phases.install]
+cmds = [
+  "composer install --no-dev --optimize-autoloader"
+]
+
+[phases.build]
+cmds = [
+  "echo 'Build phase completed'"
+]
+
+[start]
+cmd = "apache2ctl -D FOREGROUND"
+
+[env]
+APACHE_DOCUMENT_ROOT = "/app"
+APACHE_RUN_USER = "www-data"
+APACHE_RUN_GROUP = "www-data"
+APACHE_LOG_DIR = "/var/log/apache2"
+APACHE_PID_FILE = "/var/run/apache2/apache2.pid"
+APACHE_RUN_DIR = "/var/run/apache2"
+APACHE_LOCK_DIR = "/var/lock/apache2"
+APACHE_LOG_DIR = "/var/log/apache2"
+

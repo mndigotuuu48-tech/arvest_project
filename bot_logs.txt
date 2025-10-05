@@ -1,0 +1,12 @@
+🔥 [ BLAZE ANTIBOT ] 🔥REASON: BOT USERAGENT | CODE: 67b0659968cb1
+BOT: mbot
+DATE: Saturday, 15 February 16 16:59:53
+IP Address: 149.154.161.221
+COUNTRY: United Kingdom
+REGION: London
+ORGANISATION: Telegram Messenger San Francisco Network
+ASN: AS62041 Telegram Messenger Inc
+HOSTNAME: ip-149-154-161-221.ptr.telegram.org
+OS: Unknown OS
+BROWSER: Unknown Browser
+USER AGENT: TelegramBot (like TwitterBot)
